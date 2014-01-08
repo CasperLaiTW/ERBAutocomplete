@@ -1,7 +1,6 @@
-SublimeERBAutocomplete
+ERBAutocomplete
 ======================
 The Package to help use erb template user that easy and quick to finish the erb tag.
-
 
 How to install
 ===========
