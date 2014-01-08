@@ -8,6 +8,6 @@ How to install
 
 Manually:
 
-1. Clone or [download](https://github.com/CasperLaiTW/SublimeERBAutocomplete/archive/master.zip "download") git repo into your sublime text packages folder.
+1. Clone or [download](https://github.com/CasperLaiTW/ERBAutocomplete/archive/master.zip "download") git repo into your sublime text packages folder.
 
 2. Restart you sublime text editor.
