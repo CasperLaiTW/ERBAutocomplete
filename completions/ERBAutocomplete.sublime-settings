@@ -7,7 +7,7 @@
         [ "if\terb", "<% if $1 %>$0" ],
         [ "else\terb", "<% else %>"],
         [ "end\terb", "<% end %>"],
-        [ "echo\terb", "<%=$1%>$0"],
+        [ "echo\terb", "<%= $1 %>$0"],
         [ "times\terb", "<% $1.times do %>$0"]
     ]
 }
