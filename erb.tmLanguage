@@ -4,10 +4,11 @@
 <dict>
 	<key>fileTypes</key>
 	<array>
+		<string>html.erb</string>
 		<string>erb</string>
 	</array>
 	<key>name</key>
-	<string>ERB Template</string>
+	<string>ERB</string>
 	<key>patterns</key>
 	<array>
 		<dict>

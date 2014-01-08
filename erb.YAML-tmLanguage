@@ -1,8 +1,8 @@
 # [PackageDev] target_format: plist, ext: tmLanguage
 ---
-name: ERB Template
+name: ERB
 scopeName: source.html.erb
-fileTypes: ['erb']
+fileTypes: ['html.erb', 'erb']
 uuid: 8261b585-4bc2-466b-94da-dbb1cbdaa9a4
 
 patterns:
