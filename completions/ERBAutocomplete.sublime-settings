@@ -3,11 +3,23 @@
 
     "completions":
     [
-        [ "erb\terb", "<% $1 %>$0"],
-        [ "if\terb", "<% if $1 %>$0" ],
-        [ "else\terb", "<% else %>"],
-        [ "end\terb", "<% end %>"],
-        [ "echo\terb", "<%= $1 %>$0"],
-        [ "times\terb", "<% $1.times do %>$0"]
+        // base tag
+        ["erb\terb", "<% $1 %>$0"],
+        ["echo\terb", "<%= $1 %>$0"],
+        // condition
+        ["if\terb", "<% if $1 %>$0" ],
+        ["else\terb", "<% else %>"],
+        ["end\terb", "<% end %>"],
+        // javascripts
+        ["livereload_js\terb", "<%= livereload_js %>"],
+        // styles
+        // method
+        ["times\terb", "<% $1.times do %>$0"],
+        ["rand\terb", "<%= rand($1) %>$0"],
+        // lorem
+        ["lorem_image\terb", "<img src=\"<%= lorem_image(\"$1\") %>\" />$0"],
+        ["lorem_words\terb", "<%= lorem_words($1) %>$0"],
+        ["lorem_paragraph\terb", "<%= lorem_paragraph %>"],
+        ["lorem_sentence\terb", "<%= lorem_sentence %>"]
     ]
 }
