@@ -1,0 +1,13 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: ERB Template
+scopeName: source.html.erb
+fileTypes: ['erb']
+uuid: 8261b585-4bc2-466b-94da-dbb1cbdaa9a4
+
+patterns:
+- name: begin
+  match: '&lt;%'
+- name: end
+  match: '%&gt;'
+...
