@@ -1,7 +1,9 @@
 import sublime, sublime_plugin
-
-ERBCOMPLETIONS_SETTING = "ERBAutocomplete.sublime-settings"
-
+import os
+ERBCOMPLETIONS_SETTING = 'ERBAutocomplete.sublime-settings'
+BASE_PATH = os.path.abspath(os.path.dirname(__file__))
+PACKAGES_PATH = sublime.packages_path() or os.path.dirname(BASE_PATH)
+ERB_GRAMMAR = 'Packages/%s/erb.tmLanguage' % os.path.basename(BASE_PATH).replace('.sublime-package', '')
 class ERBAutoCompleteAPI():
     def init(self):
         self.words = []
@@ -36,6 +38,12 @@ class ERBAutocompleteListener(sublime_plugin.EventListener):
         completions.extend(baseCompletions)
         return completions
 
-
-
-
+    def on_load(self, view):
+        filename = view.file_name()
+        if not filename:
+            return
+        
+        name = os.path.basename(filename.lower())
+        if name[-8:] == "html.erb" or name[-3:] == "erb":
+            view.settings().set('syntax', ERB_GRAMMAR)
+            print("Switched syntax to: ERB")
