@@ -20,6 +20,10 @@
         ["lorem_image\terb", "<img src=\"<%= lorem_image(\"$1\") %>\" />$0"],
         ["lorem_words\terb", "<%= lorem_words($1) %>$0"],
         ["lorem_paragraph\terb", "<%= lorem_paragraph %>"],
-        ["lorem_sentence\terb", "<%= lorem_sentence %>"]
+        ["lorem_sentence\terb", "<%= lorem_sentence %>"],
+        // layout, partial view
+        ["yield\terb", "<%= yield %>"],
+        ["partial\terb", "<%= render :partial => \"$1\" %>$0"],
+        
     ]
 }
