@@ -24,6 +24,8 @@
         // layout, partial view
         ["yield\terb", "<%= yield %>"],
         ["partial\terb", "<%= render :partial => \"$1\" %>$0"],
+        // content helpers
+        ["capture\terb", "<% @{1} = capture do %>$0"],
         
     ]
 }
