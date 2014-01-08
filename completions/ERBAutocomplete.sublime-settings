@@ -3,11 +3,11 @@
 
     "completions":
     [
-        [ "erb\terb", "<% $0 %>"],
-        [ "if\terb", "<% if $0%>" ],
+        [ "erb\terb", "<% $1 %>$0"],
+        [ "if\terb", "<% if $1 %>$0" ],
         [ "else\terb", "<% else %>"],
         [ "end\terb", "<% end %>"],
-        [ "echo\terb", "<%=$0%>"],
-        [ "times\terb", "<% $0.times do %>"]
+        [ "echo\terb", "<%=$1%>$0"],
+        [ "times\terb", "<% $1.times do %>$0"]
     ]
 }
