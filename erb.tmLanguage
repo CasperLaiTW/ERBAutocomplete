@@ -12,16 +12,24 @@
 	<key>patterns</key>
 	<array>
 		<dict>
-			<key>match</key>
-			<string>&amp;lt;%</string>
+			<key>begin</key>
+			<string>&lt;%+#</string>
+			<key>captures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.comment.erb</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>%&gt;</string>
 			<key>name</key>
-			<string>begin</string>
+			<string>comment.block.erb</string>
 		</dict>
 		<dict>
-			<key>match</key>
-			<string>%&amp;gt;</string>
-			<key>name</key>
-			<string>end</string>
+			<key>include</key>
+			<string>text.html.basic</string>
 		</dict>
 	</array>
 	<key>scopeName</key>
