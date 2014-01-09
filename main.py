@@ -19,14 +19,10 @@ class ERBAutocompleteListener(sublime_plugin.EventListener):
             self.completions += ERBComplete.words.get('completions')
         if not self.completions:
             return []
-            
+        
         window = sublime.active_window()
-        baseCompletions = [view.extract_completions(prefix)]
-        baseCompletions = [(item,item) for sublist in baseCompletions for item in sublist] #flatten
-        baseCompletions = list(set(baseCompletions))
         completions = list(self.completions)
         completions = [tuple(attr) for attr in self.completions]
-        completions.extend(baseCompletions)
         return completions
 
     def on_load(self, view):
