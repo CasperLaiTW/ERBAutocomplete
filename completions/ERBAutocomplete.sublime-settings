@@ -8,6 +8,7 @@
         ["echo\terb", "<%= $1 %>$0"],
         // condition
         ["if\terb", "<% if $1 %>$0" ],
+        ["elseif\terb", "<% elsif ${1:true} %>"],
         ["else\terb", "<% else %>"],
         ["end\terb", "<% end %>"],
         // javascripts
