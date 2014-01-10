@@ -20,13 +20,19 @@
         // lorem
         ["lorem_image\terb", "<img src=\"<%= lorem_image(\"$1\") %>\" />$0"],
         ["lorem_words\terb", "<%= lorem_words($1) %>$0"],
-        ["lorem_paragraph\terb", "<%= lorem_paragraph %>"],
-        ["lorem_sentence\terb", "<%= lorem_sentence %>"],
+        ["lorem_paragraph\terb", "<%= lorem_paragraph %>$0"],
+        ["lorem_sentence\terb", "<%= lorem_sentence %>$0"],
         // layout, partial view
-        ["yield\terb", "<%= yield %>"],
+        ["yield\terb", "<%= yield %>$0"],
         ["partial\terb", "<%= render :partial => \"$1\" %>$0"],
-        // content helpers
-        ["capture\terb", "<% @{1} = capture do %>$0"],
+        // tag helpers
+        ["link_to\terb", "<%= link_to(\"${1:text}\", \"${2:url}\" ${3:, ${4::options}}) %>$0"],
+        ["mail_to\terb", "<%= mail_to(\"${1:email}\", \"${2:text}\") %>$0"],
+        ["content_tag\terb", "<%= content_tag(${1:tag}, \"${2:text}\" ${3, ${4::options}}) %>$0"],
+        ["image_tag\terb", "<%= image_tag(\"${1:src\" ${3, ${4::options}}) %>$0"],
+        ["javascript_tag\terb", "<%= javascript_tag \"${1:script}\" %>$0"],
+        ["javascript_include_tag\terb", "<%= javascript_include_tag \"${1:src}\" %>$0"],
+        ["stylesheet_link_tag\terb", "<%= stylesheet_link_tag \"${1:src}\" %>$0"],
         
     ]
 }
