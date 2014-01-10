@@ -1,4 +1,4 @@
-ERBAutocomplete 1.0.1
+ERBAutocomplete 1.0.2
 -------------
 
 Enhancements:
