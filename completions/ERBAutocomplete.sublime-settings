@@ -23,6 +23,17 @@
         ["lorem_date\tcreate a date\terb", "<%= lorem_date(\"${1:%Y-%m-%d}\" ${2:,${3:2011...2013}})$0 %>"],
         ["lorem_first_name\tcreate a first name\terb", "<%= lorem_first_name %>"],
         ["lorem_last_name\tcreate a last name\terb", "<%= lorem_last_name %>"],
+        // lorem zh_tw
+        ["zh_lorem_words\t產生假中文字\terb", "<%= zh_lorem_words(${1:1}) %>$0"],
+        ["zh_lorem_sentences\t產生假中文句子\terb", "<%= zh_lorem_sentences(${1:1}) %>$0"],
+        ["zh_lorem_paragraph\t產生假中文段落\terb", "<%= zh_lorem_paragraphs(${1:1}}) %>$0"],
+        ["zh_lorem_name\t產生假中文姓名\terb", "<%= zh_lorem_name %>"],
+        ["zh_lorem_name_pinyin\t產生假中文姓名拼音\terb", "<%= zh_lorem_name_pinyin %>"],
+        ["zh_lorem_first_name\t產生假中文名字\terb", "<%= zh_lorem_first_name %>"],
+        ["zh_lorem_first_name_pinyin\t產生假中文名字拼音\terb", "<%= zh_lorem_first_name_pinyin %>"],
+        ["zh_lorem_last_name\t產生假中文姓氏\terb", "<%= zh_lorem_last_name %>"],
+        ["zh_lorem_last_name_pinyin\t產生假中文姓氏拼音\terb", "<%= zh_lorem_last_name_pinyin %>"],
+        ["zh_lorem_email\t產生假中文Email\terb", "<%= zh_lorem_email %>"],
         // layout, partial view
         ["yield\tinsert content view\tlayout\terb", "<%= yield %>$0"],
         ["partial\tinclude partial view\terb", "<%= render :partial => \"$1\" %>$0"],
