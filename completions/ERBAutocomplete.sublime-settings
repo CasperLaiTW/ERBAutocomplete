@@ -4,35 +4,33 @@
     "completions":
     [
         // base tag
-        ["erb\terb", "<% $1 %>$0"],
-        ["echo\terb", "<%= $1 %>$0"],
+        ["erb\tcommon tag\terb", "<% $1 %>$0"],
+        ["echo\tprint\terb", "<%= $1 %>$0"],
         // condition
-        ["if\terb", "<% if $1 %>$0" ],
-        ["elseif\terb", "<% elsif ${1:true} %>"],
-        ["else\terb", "<% else %>"],
-        ["end\terb", "<% end %>"],
+        ["if\tonly if\terb", "<% if $1 %>$0" ],
+        ["elseif\tonly elseif\terb", "<% elsif ${1:true} %>"],
+        ["else\tonly else\terb", "<% else %>"],
+        ["end\tonly end\terb", "<% end %>"],
         // javascripts
-        ["livereload_js\terb", "<%= livereload_js %>"],
-        // styles
+        ["livereload_js\tinclude livereload js\terb", "<%= livereload_js %>"],
         // method
-        ["times\terb", "<% $1.times do %>$0"],
-        ["rand\terb", "<%= rand($1) %>$0"],
+        ["rand\trand a number\terb", "<%= rand(${1:number}) %>$0"],
         // lorem
-        ["lorem_image\terb", "<img src=\"<%= lorem_image(\"$1\") %>\" />$0"],
-        ["lorem_words\terb", "<%= lorem_words($1) %>$0"],
-        ["lorem_paragraph\terb", "<%= lorem_paragraph %>$0"],
-        ["lorem_sentence\terb", "<%= lorem_sentence %>$0"],
+        ["lorem_image\tcreate a rand image \terb", "<img src=\"<%= lorem_image(\"${1:image_size}\") %>\" />$0"],
+        ["lorem_words\tcreat rand words\terb", "<%= lorem_words(${1:length}) %>$0"],
+        ["lorem_paragraph\tcreate a paragraph\terb", "<%= lorem_paragraph %>$0"],
+        ["lorem_sentence\tcreate a sentence\terb", "<%= lorem_sentence %>$0"],
         // layout, partial view
-        ["yield\terb", "<%= yield %>$0"],
-        ["partial\terb", "<%= render :partial => \"$1\" %>$0"],
+        ["yield\tinsert content view\tlayout\terb", "<%= yield %>$0"],
+        ["partial\tinclude partial view\terb", "<%= render :partial => \"$1\" %>$0"],
         // tag helpers
-        ["link_to\terb", "<%= link_to(\"${1:text}\", \"${2:url}\" ${3:, ${4::options}}) %>$0"],
-        ["mail_to\terb", "<%= mail_to(\"${1:email}\", \"${2:text}\") %>$0"],
-        ["content_tag\terb", "<%= content_tag(${1:tag}, \"${2:text}\" ${3, ${4::options}}) %>$0"],
-        ["image_tag\terb", "<%= image_tag(\"${1:src\" ${3, ${4::options}}) %>$0"],
-        ["javascript_tag\terb", "<%= javascript_tag \"${1:script}\" %>$0"],
-        ["javascript_include_tag\terb", "<%= javascript_include_tag \"${1:src}\" %>$0"],
-        ["stylesheet_link_tag\terb", "<%= stylesheet_link_tag \"${1:src}\" %>$0"],
+        ["link_to\tcreate a link\terb", "<%= link_to(\"${1:text}\", \"${2:url}\" ${3:, ${4::options}}) %>$0"],
+        ["mail_to\tcreate a mail link\terb", "<%= mail_to(\"${1:email}\", \"${2:text}\") %>$0"],
+        ["content_tag\tcreate html tag\terb", "<%= content_tag(${1:tag}, \"${2:text}\" ${3, ${4::options}}) %>$0"],
+        ["image_tag\tcreate a image\terb", "<%= image_tag(\"${1:src\" ${3, ${4::options}}) %>$0"],
+        ["javascript_tag\tcreate javascript block\terb", "<%= javascript_tag \"${1:script}\" %>$0"],
+        ["javascript_include_tag\tinclude javascript src\terb", "<%= javascript_include_tag \"${1:src}\" %>$0"],
+        ["stylesheet_link_tag\tinclude style src\terb", "<%= stylesheet_link_tag \"${1:src}\" %>$0"],
         
     ]
 }
