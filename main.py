@@ -31,10 +31,12 @@ class ERBAutocompleteListener(sublime_plugin.EventListener):
             return
         name = os.path.basename(filename.lower())
         if name[-8:] == "html.erb" or name[-3:] == "erb":
-            view.settings().set('syntax', ERB_GRAMMAR)
-            print("Switched syntax to: ERB")
-
-
+            try:
+                view.settings().set('syntax', ERB_GRAMMAR)
+                print("Switched syntax to: ERB")
+            except:
+                pass
+            
 ERBComplete = ERBAutoCompleteAPI()
 def plugin_loaded():
     ERBComplete.init()
