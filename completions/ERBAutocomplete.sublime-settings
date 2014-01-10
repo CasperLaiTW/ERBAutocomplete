@@ -36,6 +36,17 @@
         ["zh_lorem_last_name\t產生假中文姓氏\terb", "<%= zh_lorem_last_name %>"],
         ["zh_lorem_last_name_pinyin\t產生假中文姓氏拼音\terb", "<%= zh_lorem_last_name_pinyin %>"],
         ["zh_lorem_email\t產生假中文Email\terb", "<%= zh_lorem_email %>"],
+        // lorem jp
+        ["jp_lorem_words\t產生假日文字\terb", "<%= jp_lorem_words(${1:1}) %>$0"],
+        ["jp_lorem_sentences\t產生假日文句子\terb", "<%= jp_lorem_sentences(${1:1}) %>$0"],
+        ["jp_lorem_paragraphs\t產生假日文段落\terb", "<%= jp_lorem_paragraphs(${1:1}}) %>$0"],
+        ["jp_lorem_name\t產生假日文姓名\terb", "<%= jp_lorem_name %>"],
+        ["jp_lorem_name_en\t產生假日文姓名拼音\terb", "<%= jp_lorem_name_en %>"],
+        ["jp_lorem_first_name\t產生假日文名字\terb", "<%= jp_lorem_first_name %>"],
+        ["jp_lorem_first_name_en\t產生假日文名字拼音\terb", "<%= jp_lorem_first_name_en %>"],
+        ["jp_lorem_last_name\t產生假日文姓氏\terb", "<%= jp_lorem_last_name %>"],
+        ["jp_lorem_last_name_en\t產生假日文姓氏拼音\terb", "<%= jp_lorem_last_name_en %>"],
+        ["jp_lorem_email\t產生假日文Email\terb", "<%= jp_lorem_email %>"],
         // layout, partial view
         ["yield\tinsert content view\tlayout\terb", "<%= yield %>$0"],
         ["partial\tinclude partial view\terb", "<%= render :partial => \"$1\" %>$0"],
