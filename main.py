@@ -13,15 +13,25 @@ class ERBAutoCompleteAPI():
 class ERBAutocompleteListener(sublime_plugin.EventListener):
     def on_query_completions(self, view, prefix, locations):
         self.completions = []
+        specialkey = False
         scope = ERBComplete.words.get('scope')
         
+        for region in view.sel():  
+            if region.empty():
+                line = view.line(region)
+                lineContents = view.substr(line)
+        specialkey = True if lineContents[:2].find("<") == 1 else False
+
         if scope and view.match_selector(locations[0], scope):
             self.completions += ERBComplete.words.get('completions')
         if not self.completions:
             return []
-        
-        window = sublime.active_window()
+
         completions = list(self.completions)
+        if specialkey:
+            for idx, item in enumerate(self.completions):
+                self.completions[idx][1] = item[1][1:]
+            
         completions = [tuple(attr) for attr in self.completions]
         return completions
 
