@@ -26,7 +26,8 @@
         // tag helpers
         ["link_to\tcreate a link\terb", "<%= link_to(\"${1:text}\", \"${2:url}\" ${3:, ${4::options}}) %>$0"],
         ["mail_to\tcreate a mail link\terb", "<%= mail_to(\"${1:email}\", \"${2:text}\") %>$0"],
-        ["content_tag\tcreate html tag\terb", "<%= content_tag(${1:tag}, \"${2:text}\" ${3, ${4::options}}) %>$0"],
+        ["content_tag\tcreate html\terb", "<%= content_tag(${1::tag}, \"${2:text}\" ${3, ${4::options}}) %>$0"],
+        ["tag\tcreate single html tag\terb", "<%= tag(${1:tag})$0 %>"],
         ["image_tag\tcreate a image\terb", "<%= image_tag(\"${1:src\" ${3, ${4::options}}) %>$0"],
         ["javascript_tag\tcreate javascript block\terb", "<%= javascript_tag \"${1:script}\" %>$0"],
         ["javascript_include_tag\tinclude javascript src\terb", "<%= javascript_include_tag \"${1:src}\" %>$0"],
