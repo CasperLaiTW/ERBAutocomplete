@@ -1,0 +1,7 @@
+ERBAutocomplete
+-------------
+- Add content helpers.
+
+- Add tag helpers.
+
+- Add tips words in popup view
