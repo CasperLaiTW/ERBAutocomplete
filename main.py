@@ -1,14 +1,21 @@
 import sublime, sublime_plugin
 import os
 ERBCOMPLETIONS_SETTING = 'ERBAutocomplete.sublime-settings'
+ERBBASECOMPLETIONS_SETTING = 'ERBBasecomplete.sublime-settings'
 BASE_PATH = os.path.abspath(os.path.dirname(__file__))
 PACKAGES_PATH = sublime.packages_path() or os.path.dirname(BASE_PATH)
 ERB_GRAMMAR = 'Packages/%s/erb.tmLanguage' % os.path.basename(BASE_PATH).replace('.sublime-package', '')
 
 class ERBAutoCompleteAPI():
     def init(self):
+        settings = sublime.load_settings(ERBCOMPLETIONS_SETTING).get('customCompletions')
+        customWords = []
+        for custom in settings:
+            customWords.extend(sublime.load_settings(custom).get('completions'))
+
+        self.customWords = customWords
         self.words = []
-        self.words = sublime.load_settings(ERBCOMPLETIONS_SETTING)
+        self.words = sublime.load_settings(ERBBASECOMPLETIONS_SETTING)
 
 class ERBAutocompleteListener(sublime_plugin.EventListener):
     def on_query_completions(self, view, prefix, locations):
@@ -24,6 +31,7 @@ class ERBAutocompleteListener(sublime_plugin.EventListener):
 
         if scope and view.match_selector(locations[0], scope):
             self.completions += ERBComplete.words.get('completions')
+            self.completions += ERBComplete.customWords
         if not self.completions:
             return []
 
