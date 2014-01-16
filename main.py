@@ -27,8 +27,9 @@ class ERBAutocompleteListener(sublime_plugin.EventListener):
             if region.empty():
                 line = view.line(region)
                 lineContents = view.substr(line)
-        specialkey = True if lineContents[:2].find("<") == 1 else False
 
+        specialkey = True if lineContents.strip()[:2].find("<") >= 0 else False
+        
         if scope and view.match_selector(locations[0], scope):
             self.completions += ERBComplete.words.get('completions')
             self.completions += ERBComplete.customWords
