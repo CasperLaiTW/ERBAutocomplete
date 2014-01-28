@@ -1,4 +1,14 @@
-[{
-  "keys": ["ctrl+."],
-  "command": "mark_comment"
-}]
+[
+  {
+    "keys": [
+      "ctrl+."
+    ],
+    "command": "mark_comment"
+  },
+  {
+    "keys": [
+      "ctrl+,"
+    ],
+    "command": "unmark_comment"
+  }
+]
