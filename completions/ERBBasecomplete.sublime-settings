@@ -6,6 +6,7 @@
         // base tag
         ["erb\tcommon tag\terb", "<% $1 %>$0"],
         ["echo\tprint\terb", "<%= $1 %>$0"],
+        ["pc\t註解程式\terb", "<%# $1 %>$0"],
         // condition
         ["if\tonly if\terb", "<% if $1 %>$0" ],
         ["elseif\tonly elseif\terb", "<% elsif ${1:true} %>"],

@@ -1,5 +1,6 @@
 import sublime, sublime_plugin
 import os
+import re
 ERBCOMPLETIONS_SETTING = 'ERBAutocomplete.sublime-settings'
 ERBBASECOMPLETIONS_SETTING = 'ERBBasecomplete.sublime-settings'
 BASE_PATH = os.path.abspath(os.path.dirname(__file__))
@@ -23,12 +24,17 @@ class ERBAutocompleteListener(sublime_plugin.EventListener):
         specialkey = False
         scope = ERBComplete.words.get('scope')
         
-        for region in view.sel():  
-            if region.empty():
-                line = view.line(region)
-                lineContents = view.substr(line)
+        sel = view.sel()
+        region = sel[0]
+        line = view.line(region)
+        start = line.a
+        end = sel[0].a
+        cursor = sublime.Region(start, end)
+        cursorText = view.substr(cursor)
+        temp = re.split("[^\w\.<]", cursorText)
+        lineText = temp[-1]
 
-        specialkey = True if lineContents.strip()[:2].find("<") >= 0 else False
+        specialkey = True if lineText.find("<") >= 0 else False
         
         if scope and view.match_selector(locations[0], scope):
             self.completions += ERBComplete.words.get('completions')
