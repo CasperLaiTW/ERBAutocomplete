@@ -6,17 +6,17 @@ The Package to help use erb template user that easy and quick to finish the erb 
 How to install
 -------------
 
-<!-- With [Package Control](http://wbond.net/sublime_packages/package_control):
+With [Package Control](http://wbond.net/sublime_packages/package_control):
 
 1. Run "Package Control: Install Package" command, find and install `ERBAutocomplete` package.
-2. Restart your sublime text editor. -->
+2. Restart your sublime text editor.
 
 
 Manually:
 
 1. Clone or [download](https://github.com/CasperLaiTW/ERBAutocomplete/archive/master.zip "download") git repo into your sublime text 3 packages folder.
 2. Restart your sublime text editor.
-***
+
 
 Usage
 -------------
@@ -42,8 +42,17 @@ Automatic completion:
 4. And now you type **if**, **else**, the editor will automatic activate copmletion.
 
 
+Mark / Unmark Comment
+-------------
+OSX:
 
+* Mark comment – <kbd>Command+.</kbd>
+* Unmark comment – <kbd>Command+,</kbd>
 
+Linux / Windows:
+
+* Mark comment – <kbd>Ctrl+.</kbd>
+* Unmark comment – <kbd>Ctrl+,</kbd>
 
 
 
