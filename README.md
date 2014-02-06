@@ -8,7 +8,7 @@ How to install
 
 With [Package Control](http://wbond.net/sublime_packages/package_control):
 
-1. Run "Package Control: Install Package" command, find and install waERBAutocomplete` package.
+1. Run "Package Control: Install Package" command, find and install `ERBAutocomplete` package.
 2. Restart your sublime text editor.
 
 
