@@ -25,7 +25,7 @@
               {
                 "command": "open_file",
                 "args": {
-                  "file": "${packages}/ERBAutocomplete.sublime-settings",
+                  "file": "${packages}/ERBAutocomplete/ERBAutocomplete.sublime-settings",
                 },
                 "caption": "Settings – Default"
               },
