@@ -14,12 +14,6 @@ ERBComplete = None
 # API
 class ERBAutoCompleteAPI():
     def init(self):
-        settings = sublime.load_settings(ERBCOMPLETIONS_SETTING).get('customCompletions')
-        customWords = []
-        for custom in settings:
-            customWords.extend(sublime.load_settings(custom).get('completions'))
-
-        self.customWords = customWords
         self.words = []
         self.words = sublime.load_settings(ERBBASECOMPLETIONS_SETTING)
     def get_line_text(self, view):
@@ -41,13 +35,18 @@ class ERBAutoCompleteAPI():
         cursor = sublime.Region(start, end)
         cursorText = view.substr(cursor)
         return cursorText
+    def get_custom_tag(self):
+        settings = sublime.load_settings(ERBCOMPLETIONS_SETTING).get('customCompletions')
+        customWords = []
+        for custom in settings:
+            customWords.extend(sublime.load_settings(custom).get('completions'))
+        return customWords
 # Completion
 class ERBAutocompleteListener(sublime_plugin.EventListener):
     def on_query_completions(self, view, prefix, locations):
         self.completions = []
         specialkey = False
         scope = ERBComplete.words.get('scope')
-        
         temp = ERBComplete.get_line_text(view)
         lineText = temp[-1]
 
@@ -55,7 +54,7 @@ class ERBAutocompleteListener(sublime_plugin.EventListener):
         
         if scope and view.match_selector(locations[0], scope):
             self.completions += ERBComplete.words.get('completions')
-            self.completions += ERBComplete.customWords
+            self.completions += ERBComplete.get_custom_tag()
         if not self.completions:
             return []
 
