@@ -1,6 +1,6 @@
 ERBAutocomplete
 ======================
-The package to help use erb template user that easy and quick to finish the erb tag.
+The package to help use erb template user that easy and quick to finish the ERB tag.
 ***
 
 How to install
@@ -14,7 +14,7 @@ With [Package Control](http://wbond.net/sublime_packages/package_control):
 
 Manually:
 
-1. Clone or [download](https://github.com/CasperLaiTW/ERBAutocomplete/archive/master.zip "download") git repo into your sublime text 3 packages folder.
+1. Clone or [download](https://github.com/CasperLaiTW/ERBAutocomplete/archive/master.zip "download") git repo into your Sublime Text 3 packages folder.
 2. Restart your sublime text editor.
 
 
@@ -26,8 +26,8 @@ And you can:
 
 Manually:
 
-1. Type erb keyword like **if**, **else** or nothing.
-2. Press `ctrl` + `spcae`, will activate completion. ST would popup to tip you and select you want.
+1. Type ERB keyword like **if**, **else** or nothing.
+2. Press `ctrl` + `space`, will activate completion. ST would popup to tip you and select you want.
 
 Automatic completion:
 
@@ -38,8 +38,8 @@ Automatic completion:
   ```json
   "auto_complete_selector" : "text.html.erb, source - comment, meta.tag - punctuation.definition.tag.begin"
   ```
-3. Reset your sublime text editor.
-4. And now you type **if**, **else**, the editor will automatic activate copmletion.
+3. Reset your Sublime Text editor.
+4. And now you type **if**, **else**, the editor will automatic activate completion.
 
 
 Mark / Unmark Comment
