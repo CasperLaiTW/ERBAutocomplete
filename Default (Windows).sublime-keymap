@@ -10,5 +10,11 @@
       "ctrl+,"
     ],
     "command": "unmark_comment"
+  },
+  {
+    "keys":[
+      "ctrl+alt+l"
+    ],
+    "command": "create_layout"
   }
 ]
