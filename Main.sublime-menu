@@ -15,7 +15,7 @@
               {
                 "command": "open_file",
                 "args": {
-                  "file": "${packages}/ERBAutocomplete/README.md"
+                  "file": "${packages}/ERB Autocomplete/README.md"
                 },
                 "caption": "README"
               },
@@ -25,7 +25,7 @@
               {
                 "command": "open_file",
                 "args": {
-                  "file": "${packages}/ERBAutocomplete/ERBAutocomplete.sublime-settings",
+                  "file": "${packages}/ERB Autocomplete/ERBAutocomplete.sublime-settings"
                 },
                 "caption": "Settings – Default"
               },
@@ -40,7 +40,7 @@
               {
                 "command": "open_file",
                 "args": {
-                  "file": "${packages}/ERBAutocomplete/Default (OSX).sublime-keymap",
+                  "file": "${packages}/ERB Autocomplete/Default (OSX).sublime-keymap",
                   "platform": "OSX"
                 },
                 "caption": "Key Bindings – Default"
@@ -48,7 +48,7 @@
               {
                 "command": "open_file",
                 "args": {
-                  "file": "${packages}/ERBAutocomplete/Default (Linux).sublime-keymap",
+                  "file": "${packages}/ERB Autocomplete/Default (Linux).sublime-keymap",
                   "platform": "Linux"
                 },
                 "caption": "Key Bindings – Default"
