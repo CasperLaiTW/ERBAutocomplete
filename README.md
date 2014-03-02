@@ -1,4 +1,4 @@
-ERBAutocomplete
+ERB Autocomplete
 ======================
 The package to help use erb template user that easy and quick to finish the ERB tag.
 ***
@@ -14,10 +14,13 @@ With [Package Control](http://wbond.net/sublime_packages/package_control):
 
 Manually:
 
-1. Clone or [download](https://github.com/CasperLaiTW/ERBAutocomplete/archive/master.zip "download") git repo into your Sublime Text 3 packages folder.
+1. Clone or [download](https://github.com/CasperLaiTW/ERBAutocomplete/archive/master.zip "download") git repo into your Sublime Text packages folder.
+  ```
+  git clone https://github.com/CasperLaiTW/ERBAutocomplete.git "ERB Autocomplete"
+  ```
 2. Restart your sublime text editor.
 
-
+*We are support ST2 and ST3 now.*
 Usage
 -------------
 You would set syntax to **ERB**.
