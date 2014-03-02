@@ -25,6 +25,7 @@ class Core():
         cursorText = view.substr(cursor)
         temp = re.split("[^\w\.\%<]", cursorText)
         return temp
+
     def get_lines_text(self, view):
         sel = view.sel()
         region = sel[0]
@@ -34,11 +35,26 @@ class Core():
         cursor = sublime.Region(start, end)
         cursorText = view.substr(cursor)
         return cursorText
+
     def get_custom_tag(self):
         settings = sublime.load_settings(ERBCOMPLETIONS_SETTING).get('customCompletions')
         customWords = []
         for custom in settings:
             customWords.extend(sublime.load_settings(custom).get('completions'))
         return customWords
+
     def get_grammar_path(self):
         return ERB_GRAMMAR
+
+    def get_project_path(self, path):
+        if path is None:
+            sublime.active_window().new_file()
+            return None
+
+        project_dir = os.path.normcase(os.path.dirname(path))
+        win = sublime.active_window()
+        for project in win.folders():
+            index = project_dir.lower().find(project.lower())
+            if(index > -1):
+                return os.path.normcase(project)
+        return None
