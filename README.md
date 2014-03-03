@@ -52,12 +52,25 @@ If you press keyboard shortcut, Sublime Text would only create new file and show
 If your project is not root, means your project's parent have any folder. Please create a file named `.base` in your project. We will detect the file and means this is your project root. Layout will created in this folder.
 
 
+### Manage page and layout mapping
+#### Mapping layout
+1. Open you want to mapping view.
+2. Run command `ERB: Add Layout Mapping`
+2. Sublime Text will show all layout in your project.
+3. Select layout you want.
+4. Done!!!
+
+#### Unmapping layout
+1. Open you want to unmapping view.
+2. Run command `ERB: Remove Layout Mapping`
+3. Auto delete mapping file. Done!!!
+
 ## Avaiable actions
 OSX:
 
 * Mark comment – <kbd>Command+.</kbd>
 * Unmark comment – <kbd>Command+,</kbd>
-* Create custom layout file - <kbd>Ctrl+Alt+l</kbd>
+* Create custom layout file - <kbd>Command+Alt+l</kbd>
 
 Linux / Windows:
 
