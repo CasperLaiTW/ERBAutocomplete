@@ -47,7 +47,7 @@ class Core():
         print(BASE_PATH)
         print(ERB_GRAMMAR)
         print(PACKAGES_PATH)
-        print(os.path.join(os.path.dirname(__file__))
+        print(os.path.join(os.path.dirname(__file__)))
         return ERB_GRAMMAR
 
     def get_project_path(self, path):
