@@ -48,7 +48,6 @@ class Core():
 
     def get_project_path(self, path):
         if path is None:
-            sublime.active_window().new_file()
             return None
 
         project_dir = os.path.normcase(os.path.dirname(path))
