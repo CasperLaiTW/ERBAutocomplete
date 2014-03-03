@@ -15,7 +15,7 @@ class CreateLayoutCommand(sublime_plugin.TextCommand):
         self.project_dir = core.get_project_path(path)
         if self.project_dir is not None:
             self.view.window().show_input_panel('Enter layout filename.', '_custom_layout.html.erb', self.on_done, None, None)
-        else
+        else:
             sublime.active_window().new_file()
             
     def on_done(self, text):
