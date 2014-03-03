@@ -1,0 +1,7 @@
+[
+    {
+        "caption" : "ERB: Add Layout Mapping",
+        "command" : "mapping_layout",
+        "args" : {}
+    }
+]
