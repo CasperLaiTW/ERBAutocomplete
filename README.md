@@ -1,10 +1,10 @@
-ERB Autocomplete
-======================
+# ERB Autocomplete
+
 The package to help use erb template user that easy and quick to finish the ERB tag.
 ***
 
-How to install
--------------
+## How to install
+
 
 With [Package Control](http://wbond.net/sublime_packages/package_control):
 
@@ -21,8 +21,8 @@ Manually:
 2. Restart your sublime text editor.
 
 *We are support ST2 and ST3 now.*
-Usage
--------------
+
+## Auto complete
 You would set syntax to **ERB**.
 
 And you can:
@@ -30,7 +30,7 @@ And you can:
 Manually:
 
 1. Type ERB keyword like **if**, **else** or nothing.
-2. Press `ctrl` + `space`, will activate completion. ST would popup to tip you and select you want.
+2. Press `Command` + `space`, will activate completion. ST would popup to tip you and select you want.
 
 Automatic completion:
 
@@ -44,19 +44,26 @@ Automatic completion:
 3. Reset your Sublime Text editor.
 4. And now you type **if**, **else**, the editor will automatic activate completion.
 
+## Create layout
+We support quick to create layout file. You can Press `Ctrl` + `Alt` + `l`, Sublime Text will show input panel to you and type your custom layout filename. We will create the file in your project.
 
-Mark / Unmark Comment
--------------
+If you press keyboard shortcut, Sublime Text would only create new file and show. Sublime text don't show input panel. That's means you don't open any file window and active in your project. So you should open any file window in your project. It will be working.
+
+If your project is not root, means your project's parent have any folder. Please create a file named `.base` in your project. We will detect the file and means this is your project root. Layout will created in this folder.
+
+
+## Avaiable actions
 OSX:
 
 * Mark comment – <kbd>Command+.</kbd>
 * Unmark comment – <kbd>Command+,</kbd>
+* Create custom layout file - <kbd>Ctrl+Alt+l</kbd>
 
 Linux / Windows:
 
 * Mark comment – <kbd>Ctrl+.</kbd>
 * Unmark comment – <kbd>Ctrl+,</kbd>
-
+* Create custom layout file - <kbd>Ctrl+Alt+l</kbd>
 
 
 
