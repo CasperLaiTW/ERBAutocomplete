@@ -1,19 +1,19 @@
 [
   {
     "keys": [
-      "Command+."
+      "command+."
     ],
     "command": "mark_comment"
   },
   {
     "keys": [
-      "Command+,"
+      "command+,"
     ],
     "command": "unmark_comment"
   },
   {
     "keys":[
-      "ctrl+alt+l"
+      "command+alt+l"
     ],
     "command": "create_layout"
   }
