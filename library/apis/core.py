@@ -63,3 +63,14 @@ class Core():
                         return base
                 return os.path.normcase(project)
         return None
+    def is_erb_file(self, path):
+        if re.search('^[a-zA-Z0-9\-\_\.]*\.html\.erb$', os.path.basename(path)) is None:
+            return False
+        else:
+            return True
+
+    def is_erb_layout_file(self, path):
+        if re.search('^_[a-zA-Z0-9\-\_\.]*\.html\.erb$', os.path.basename(path)) is None:
+            return False
+        else:
+            return True
