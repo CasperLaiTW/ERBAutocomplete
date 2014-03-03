@@ -1,6 +1,5 @@
 import sublime, sublime_plugin;
 import os;
-import re;
 try:
     # ST3
     from ..apis.core import Core
