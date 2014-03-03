@@ -7,7 +7,7 @@ ERBCOMPLETIONS_SETTING = 'ERBAutocomplete.sublime-settings'
 ERBBASECOMPLETIONS_SETTING = 'ERBBasecomplete.sublime-settings'
 BASE_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
 PACKAGES_PATH = sublime.packages_path() or os.path.dirname(BASE_PATH)
-ERB_GRAMMAR = 'Packages/%s/erb.tmLanguage' % os.path.basename(BASE_PATH).replace(' ', '\ ').replace('.sublime-package', '')
+ERB_GRAMMAR = 'Packages/%s/erb.tmLanguage' % os.path.basename(BASE_PATH).replace('.sublime-package', '')
 
 # API
 class Core():
@@ -44,6 +44,10 @@ class Core():
         return customWords
 
     def get_grammar_path(self):
+        print(BASE_PATH)
+        print(ERB_GRAMMAR)
+        print(PACKAGES_PATH)
+        print(os.path.join(os.path.dirname(__file__))
         return ERB_GRAMMAR
 
     def get_project_path(self, path):
