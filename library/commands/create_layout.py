@@ -17,9 +17,7 @@ class CreateLayoutCommand(sublime_plugin.TextCommand):
             self.view.window().show_input_panel('Enter layout filename.', '_custom_layout.html.erb', self.on_done, None, None)
 
     def on_done(self, text):
-        print(self.project_dir)
         file_path = os.path.join(self.project_dir, text)
-        print(file_path)
         f = open(file_path, 'w+')
         f.close()
         sublime.active_window().open_file(file_path)

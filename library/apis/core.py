@@ -56,5 +56,11 @@ class Core():
         for project in win.folders():
             index = project_dir.lower().find(project.lower())
             if(index > -1):
+                relatives = project_dir.replace(project, '').split('/')[1:]
+                base = project
+                for relative in relatives:
+                    base = os.path.join(base, relative)
+                    if os.path.isfile(os.path.join(base, '.base')):
+                        return base
                 return os.path.normcase(project)
         return None
