@@ -22,6 +22,15 @@ Manually:
 
 *We are support ST2 and ST3 now.*
 
+## *.base* file
+The `.base` file is means your project root and its content include `ERB Autocomplete` package's configuration.
+```json
+{
+    "partials" : "partials"
+}
+```
+We suggest you create the file. If you don't want, it's ok. We will use default setting.
+
 ## Auto complete
 You would set syntax to **ERB**.
 
@@ -44,6 +53,7 @@ Automatic completion:
 3. Reset your Sublime Text editor.
 4. And now you type **if**, **else**, the editor will automatic activate completion.
 
+
 ## Create layout
 We support quick to create layout file. You can Press `Ctrl` + `Alt` + `l`, Sublime Text will show input panel to you and type your custom layout filename. We will create the file in your project.
 
@@ -64,6 +74,14 @@ If your project is not root, means your project's parent have any folder. Please
 1. Open you want to unmapping view.
 2. Run command `ERB: Remove Layout Mapping`
 3. Auto delete mapping file. Done!!!
+
+#### Added partials
+*Partial view default folder name: `partials`*
+1. Open your file and cursor to you want to added.
+2. Run command `ERB: ERB: Add Partial Mapping`
+3. Sublime Text will show all partial views in project's partial folder.
+4. Select partial view you want.
+5. Done!!!
 
 ## Avaiable actions
 OSX:
