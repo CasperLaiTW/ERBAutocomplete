@@ -11,8 +11,7 @@ class MappingLayoutCommand(sublime_plugin.WindowCommand):
     def run(self, *args, **kwargs):
         core = Core()
         self.layout_list = []
-        path = self.window.active_view().file_name();
-
+        path = self.window.active_view().file_name()
         if core.is_erb_file(path) is False:
             sublime.error_message('File is not ERB file.')
             return
