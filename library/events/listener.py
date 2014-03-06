@@ -18,7 +18,7 @@ class ERBAutocompleteListener(sublime_plugin.EventListener):
         lineText = temp[-1]
 
         specialkey = True if lineText.find("<") >= 0 else False
-        
+
         if scope and view.match_selector(locations[0], scope):
             self.completions += core.words.get('completions')
             self.completions += core.get_custom_tag()
@@ -29,7 +29,7 @@ class ERBAutocompleteListener(sublime_plugin.EventListener):
         if specialkey:
             for idx, item in enumerate(self.completions):
                 self.completions[idx][1] = item[1][1:]
-            
+
         completions = [tuple(attr) for attr in self.completions]
         return completions
 

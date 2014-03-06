@@ -14,7 +14,7 @@ class Core():
     def __init__(self):
         self.words = []
         self.words = sublime.load_settings(ERBBASECOMPLETIONS_SETTING)
-        
+
     def get_line_text(self, view):
         sel = view.sel()
         region = sel[0]
