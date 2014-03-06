@@ -11,7 +11,6 @@ class MappingLayoutCommand(sublime_plugin.WindowCommand):
     def run(self, *args, **kwargs):
         core = Core()
         self.layout_list = []
-        core = Core()
         path = self.window.active_view().file_name();
 
         if core.is_erb_file(path) is False:
