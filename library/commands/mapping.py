@@ -35,4 +35,21 @@ class MappingLayoutCommand(sublime_plugin.WindowCommand):
             f.write(custom_layout)
             f.close()
 
+class MappingPartialCommand(sublime_plugin.TextCommand):
+    def run(self, edit):
+        core = Core()
+        project_dir = self.view.file_name()
+        partial_dir = core.get_partial_path(project_dir)
+        self.partial_list = []
+        for name in os.listdir(partial_dir):
+            if core.is_erb_layout_file(name) is False:
+                    continue
+            if os.path.isfile(os.path.join(partial_dir, name)):
+                self.partial_list.append([name, os.path.join(partial_dir, name)])
+        sublime.active_window().show_quick_panel(self.partial_list, self.on_mapping);
 
+    def on_mapping(self, index):
+        if index > -1:
+            partial = self.partial_list[index][0][:-9]
+            mapping = '<%= render :partial => "' + partial + '" %>'
+            self.view.run_command('insert', {'characters': mapping})

@@ -8,5 +8,10 @@
         "caption" : "ERB: Remove Layout Mapping",
         "command" : "unmapping_layout",
         "args" : {}
+    },
+    {
+        "caption" : "ERB: Add Partial Mapping",
+        "command" : "mapping_partial",
+        "args": {}
     }
 ]
