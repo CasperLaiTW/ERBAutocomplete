@@ -77,6 +77,7 @@ If your project is not root, means your project's parent have any folder. Please
 
 #### Added partials
 *Partial view default folder name: `partials`*
+
 1. Open your file and cursor to you want to added.
 2. Run command `ERB: ERB: Add Partial Mapping`
 3. Sublime Text will show all partial views in project's partial folder.
