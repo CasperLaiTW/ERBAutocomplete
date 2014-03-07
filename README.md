@@ -23,13 +23,13 @@ Manually:
 *We are support ST2 and ST3 now.*
 
 ## *.base* file
-The `.base` file is means your project root and its content include `ERB Autocomplete` package's configuration.
+The `.base` file is project root, its include `ERB Autocomplete` package's configuration.
 ```json
 {
     "partials" : "partials"
 }
 ```
-We suggest you create the file. If you don't want, it's ok. We will use default setting.
+We suggest you create this file. If you don't want, it's ok. We will use default setting.
 
 ## Auto complete
 You would set syntax to **ERB**.
