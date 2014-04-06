@@ -16,6 +16,7 @@ class MappingLayoutCommand(sublime_plugin.WindowCommand):
             sublime.error_message('File is not ERB file.')
             return
         self.project_dir = core.get_project_path(path)
+        self.view_dir = os.path.dirname(path);
         if self.project_dir is not None:
             for name in os.listdir(self.project_dir):
                 if core.is_erb_layout_file(name) is False:
@@ -30,9 +31,11 @@ class MappingLayoutCommand(sublime_plugin.WindowCommand):
         if index > -1:
             custom_layout = self.layout_list[index][0]
             filename = os.path.basename(self.window.active_view().file_name())
-            mapping_layout_file = os.path.join(self.project_dir, filename[:-3] + 'layout')
+            layout_relative = os.path.relpath(self.project_dir, os.path.dirname(self.window.active_view().file_name()));
+            layout_relative = '' if layout_relative == '.' else layout_relative
+            mapping_layout_file = os.path.join(self.view_dir, filename[:-3] + 'layout')
             f = open(mapping_layout_file, "w")
-            f.write(custom_layout)
+            f.write(os.path.join(layout_relative, custom_layout))
             f.close()
 
 class MappingPartialCommand(sublime_plugin.TextCommand):
@@ -40,6 +43,7 @@ class MappingPartialCommand(sublime_plugin.TextCommand):
         core = Core()
         project_dir = self.view.file_name()
         partial_dir = core.get_partial_path(project_dir)
+        self.partial_asset = os.path.relpath(partial_dir, os.path.dirname(project_dir))
         self.partial_list = []
         for name in os.listdir(partial_dir):
             if core.is_erb_layout_file(name) is False:
@@ -51,5 +55,5 @@ class MappingPartialCommand(sublime_plugin.TextCommand):
     def on_mapping(self, index):
         if index > -1:
             partial = self.partial_list[index][0][:-9]
-            mapping = '<%= render :partial => "' + partial + '" %>'
+            mapping = '<%= render :partial => "' + os.path.join(self.partial_asset, partial[1::]) + '" %>'
             self.view.run_command('insert', {'characters': mapping})

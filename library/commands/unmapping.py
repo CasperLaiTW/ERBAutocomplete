@@ -10,7 +10,6 @@ except (ImportError, ValueError):
 class UnmappingLayoutCommand(sublime_plugin.WindowCommand):
     def run(self, *args, **kwargs):
         core = Core()
-        core = Core()
         path = self.window.active_view().file_name();
 
         if core.is_erb_file(path) is False:
