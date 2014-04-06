@@ -40,6 +40,7 @@ class MappingPartialCommand(sublime_plugin.TextCommand):
         core = Core()
         project_dir = self.view.file_name()
         partial_dir = core.get_partial_path(project_dir)
+        self.partial_asset = os.path.relpath(partial_dir, os.path.dirname(project_dir))
         self.partial_list = []
         for name in os.listdir(partial_dir):
             if core.is_erb_layout_file(name) is False:
@@ -51,5 +52,5 @@ class MappingPartialCommand(sublime_plugin.TextCommand):
     def on_mapping(self, index):
         if index > -1:
             partial = self.partial_list[index][0][:-9]
-            mapping = '<%= render :partial => "' + partial + '" %>'
+            mapping = '<%= render :partial => "' + os.path.join(self.partial_asset, partial[1::]) + '" %>'
             self.view.run_command('insert', {'characters': mapping})
