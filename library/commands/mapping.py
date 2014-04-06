@@ -31,11 +31,9 @@ class MappingLayoutCommand(sublime_plugin.WindowCommand):
         if index > -1:
             custom_layout = self.layout_list[index][0]
             filename = os.path.basename(self.window.active_view().file_name())
-            layout_relative = os.path.relpath(self.project_dir, os.path.dirname(self.window.active_view().file_name()));
-            layout_relative = '' if layout_relative == '.' else layout_relative
             mapping_layout_file = os.path.join(self.view_dir, filename[:-3] + 'layout')
             f = open(mapping_layout_file, "w")
-            f.write(os.path.join(layout_relative, custom_layout))
+            f.write(custom_layout)
             f.close()
 
 class MappingPartialCommand(sublime_plugin.TextCommand):
