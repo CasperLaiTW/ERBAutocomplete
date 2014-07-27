@@ -15,6 +15,7 @@ With [Package Control](http://wbond.net/sublime_packages/package_control):
 Manually:
 
 1. Clone or [download](https://github.com/CasperLaiTW/ERBAutocomplete/archive/master.zip "download") git repo into your Sublime Text packages folder.
+
   ```
   git clone https://github.com/CasperLaiTW/ERBAutocomplete.git "ERB Autocomplete"
   ```
