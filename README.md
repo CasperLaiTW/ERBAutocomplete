@@ -88,14 +88,12 @@ If your project is not root, means your project's parent have any folder. Please
 ## Avaiable actions
 OSX:
 
-* Mark comment – <kbd>Command+.</kbd>
-* Unmark comment – <kbd>Command+,</kbd>
+* Toggle Mark comment – <kbd>Command+.</kbd>
 * Create custom layout file - <kbd>Command+Alt+l</kbd>
 
 Linux / Windows:
 
-* Mark comment – <kbd>Ctrl+.</kbd>
-* Unmark comment – <kbd>Ctrl+,</kbd>
+* Toggle Mark comment – <kbd>Ctrl+.</kbd>
 * Create custom layout file - <kbd>Ctrl+Alt+l</kbd>
 
 
