@@ -3,13 +3,7 @@
     "keys": [
       "command+."
     ],
-    "command": "mark_comment"
-  },
-  {
-    "keys": [
-      "command+,"
-    ],
-    "command": "unmark_comment"
+    "command": "toggle_mark"
   },
   {
     "keys":[

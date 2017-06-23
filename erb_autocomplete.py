@@ -17,8 +17,7 @@ if reloader in sys.modules:
 try:
     # ST3
     from .library import reloader
-    from .library.commands.mark import MarkCommentCommand
-    from .library.commands.unmark import UnmarkCommentCommand
+    from .library.commands.toggle_mark import ToggleMarkCommand
     from .library.commands.create_layout import CreateLayoutCommand
     from .library.commands.mapping import *
     from .library.commands.unmapping import UnmappingLayoutCommand
@@ -26,8 +25,7 @@ try:
 except (ImportError, ValueError):
     # ST2
     from library import reloader
-    from library.commands.mark import MarkCommentCommand
-    from library.commands.unmark import UnmarkCommentCommand
+    from library.commands.toggle_mark import ToggleMarkCommand
     from library.commands.create_layout import CreateLayoutCommand
     from library.commands.mapping import *
     from library.commands.unmapping import UnmappingLayoutCommand

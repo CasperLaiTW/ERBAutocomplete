@@ -22,8 +22,7 @@ mods_load_order = [
     '.apis.core',
 
     '.commands',
-    '.commands.mark',
-    '.commands.unmark',
+    '.commands.toggle_mark',
     '.commands.create_layout',
     '.commands.mapping',
     '.commands.unmapping',

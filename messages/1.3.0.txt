@@ -1,0 +1,5 @@
+ERB Autocomplete 1.3.0
+-------------
+
+Enhancements:
+- Marged `mark` and `unmark` command. Use `command+.` for both.
