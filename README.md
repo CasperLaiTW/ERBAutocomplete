@@ -40,7 +40,7 @@ And you can:
 Manually:
 
 1. Type ERB keyword like **if**, **else** or nothing.
-2. Press `Command` + `space`, will activate completion. ST would popup to tip you and select you want.
+2. Press `Control` + `space`, will activate completion. ST would popup to tip you and select you want.
 
 Automatic completion:
 
